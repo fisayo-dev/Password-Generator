@@ -118,7 +118,6 @@ body {
 .strength-bar {
   height: 100%;
   width: 0;
-  min-width: 20%;
   background: linear-gradient(
     45deg,
     var(--primarycolor),

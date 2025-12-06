@@ -57,7 +57,7 @@ function makepassword(){
     const newPassword = doPassword(length, includeUpper, includeLower, includeNumbers, includeSymbols)
     strengthTxt.textContent = strength
     passwordInput.textContent = newPassword
-    strengthBar.style.minWidth = ((strengthScore / 30) * 100) + "%";
+    strengthBar.style.width = ((strengthScore / 30) * 100) + "%";
 }
 
 function doPassword(Len, IUpp, ILow, INum, ISym){
