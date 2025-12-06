@@ -1,3 +1,4 @@
+// Selectors
 const passwordInput = document.querySelector(".password");
 const lengthSlider = document.querySelector("#length-sli");
 const lengthDisplay = document.querySelector("#length-value");
@@ -9,6 +10,7 @@ const regenerateButton = document.querySelector("#regen-btn");
 const strengthTxt = document.querySelector("#strength-txt");
 const strengthBar = document.querySelector(".strength-bar");
 
+// Constants
 const uppercaseLetters = "ABCDEFGHIJKMNLOPQRSTUVWXYZ";
 const lowercaseLetters = "abcdefghijkmnlopqrstuvwxyz";
 const numbers = "1234567890";
@@ -20,6 +22,9 @@ lengthSlider.addEventListener("input", () => {
 
 regenerateButton.addEventListener("click", makepassword);
 
+// Functions
+
+// Make password function
 function makepassword() {
   const length = Number(lengthSlider.value);
   const includeUpper = upperCaseCheckBox.checked;
@@ -27,6 +32,7 @@ function makepassword() {
   const includeNumbers = numbersCheckBox.checked;
   const includeSymbols = symbolsCaseCheckBox.checked;
 
+  //   Logic for strength
   let strength = "low";
   let strengthScore = 1;
 
@@ -54,6 +60,7 @@ function makepassword() {
     return;
   }
 
+  // Create new password with parameters
   const newPassword = doPassword(
     length,
     includeUpper,
@@ -66,6 +73,7 @@ function makepassword() {
   strengthBar.style.width = (strengthScore / 30) * 100 + "%";
 }
 
+// Actual password generation
 function doPassword(Len, IUpp, ILow, INum, ISym) {
   let finalPassword = "";
   let allCharacters = "";
