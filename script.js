@@ -1,3 +1,10 @@
+import {
+  lowercaseLetters,
+  numbers,
+  symbols,
+  uppercaseLetters,
+} from "./constants.js";
+
 // Selectors
 const passwordInput = document.querySelector(".password");
 const lengthSlider = document.querySelector("#length-sli");
@@ -9,12 +16,6 @@ const symbolsCaseCheckBox = document.querySelector("#symbols");
 const regenerateButton = document.querySelector("#regen-btn");
 const strengthTxt = document.querySelector("#strength-txt");
 const strengthBar = document.querySelector(".strength-bar");
-
-// Constants
-const uppercaseLetters = "ABCDEFGHIJKMNLOPQRSTUVWXYZ";
-const lowercaseLetters = "abcdefghijkmnlopqrstuvwxyz";
-const numbers = "1234567890";
-const symbols = "!@#$%^&*()_-'+=:;?><,./~`|";
 
 lengthSlider.addEventListener("input", () => {
   lengthDisplay.textContent = lengthSlider.value;

@@ -1,54 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Password Generator</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="Images/Password Gen Logo.png">
-</head>
-<body>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="Images/Password Gen Logo.png" />
+  </head>
+  <body>
     <div class="container">
-        <h1>Password Generator</h1>
-        <div class="password-container">
-            <h3 class="password">Your Password...</h3>
+      <h1>Password Generator</h1>
+      <div class="password-container">
+        <h3 class="password">Your Password...</h3>
+      </div>
+      <div class="length">
+        <label>Password Length</label>
+        <div class="len-range">
+          <label for=""></label>
+          <input type="range" id="length-sli" min="6" max="20" value="10" />
+          <span id="length-value"><b>10</b></span>
         </div>
-        <div class="length">
-            <label>Password Length</label>
-            <div class="len-range">
-                <label for=""></label>
-                <input type="range" id="length-sli" min="6" max="20" value="10"/>
-                <span id="length-value"><b>10</b></span>
-            </div>
+      </div>
+      <div class="check-boxes">
+        <div class="option">
+          <label id="checkboxs">Include UpperCase</label>
+          <input type="checkbox" id="uppercase" />
         </div>
-        <div class="check-boxes">
-            <div class="option">
-                <label id="checkboxs">Include UpperCase</label>
-                <input type="checkbox" id="uppercase">
-            </div>
-            <div class="option">
-                <label id="checkboxs">Include LowerCase</label>
-                <input type="checkbox" id="lowercase">
-            </div>
-            <div class="option">
-                <label id="checkboxs">Include Numbers</label>
-                <input type="checkbox" id="numbers">
-            </div>
-            <div class="option">
-                <label id="checkboxs">Include Symbols</label>
-                <input type="checkbox" id="symbols">
-            </div>
+        <div class="option">
+          <label id="checkboxs">Include LowerCase</label>
+          <input type="checkbox" id="lowercase" />
         </div>
-        <button id="regen-btn">Regenerate Password</button>
-        <div class="pass-strength">
-            <p>Password Strength: <span id="strength-txt">medium</span></p>
-            <div class="strength-meter">
-                <div class="strength-bar"></div>
-            </div>
+        <div class="option">
+          <label id="checkboxs">Include Numbers</label>
+          <input type="checkbox" id="numbers" />
         </div>
+        <div class="option">
+          <label id="checkboxs">Include Symbols</label>
+          <input type="checkbox" id="symbols" />
+        </div>
+      </div>
+      <button id="regen-btn">Regenerate Password</button>
+      <div class="pass-strength">
+        <p>Password Strength: <span id="strength-txt">medium</span></p>
+        <div class="strength-meter">
+          <div class="strength-bar"></div>
+        </div>
+      </div>
     </div>
 
-    <script src="script.js"></script>
-
-</body>
+    <script type="module" src="script.js"></script>
+  </body>
 </html>
