@@ -72,6 +72,14 @@ function makepassword() {
   strengthTxt.textContent = strength;
   passwordInput.textContent = newPassword;
   strengthBar.style.width = (strengthScore / 30) * 100 + "%";
+  // Set strength bar color
+  if (strength === "low") {
+    strengthBar.style.background = "#e74c3c"; // red
+  } else if (strength === "medium") {
+    strengthBar.style.background = "#f39c12"; // orange
+  } else {
+    strengthBar.style.background = "#27ae60"; // green
+  }
 }
 
 // Actual password generation
